@@ -18,7 +18,7 @@ export class CurrencyConverterComponent {
 
   originalValue: ModelSignal<number> = model(100);
   variableRate: ModelSignal<number> = this.currencyConverterService.variableRate;
-  fixRate: ModelSignal<number> = model(1.5);
+  fixRate: ModelSignal<number> = model(1.02);
   applicableRate = computed(() => {
     if (this.variation() > 2) {
       return this.variableRate();
@@ -30,8 +30,7 @@ export class CurrencyConverterComponent {
   variation = computed(() => {
     const fromFixRateValue = this.originalValue() * this.fixRate();
     const fromVariableRateValue = this.originalValue() * this.variableRate();
-    const variation = 3;
-    return variation;
+    return Math.abs(100 -((fromFixRateValue / fromVariableRateValue) *100));
   })
   convertedValue = computed(() => this.originalValue() * this.applicableRate());
 
