@@ -20,7 +20,7 @@
       <label class="info-label">Converted value : {{ convertedValue() | number : "1.0-3" | currency : selectedCurrency()}}</label>
     </div>
     <div class="history">
-      <app-currency-converter-history [history]="currencyConverterService.history()"></app-currency-converter-history>
+      <app-currency-converter-history></app-currency-converter-history>
     </div>
 
   </article>
