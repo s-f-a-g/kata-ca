@@ -1,6 +1,25 @@
 <main class="content">
   <article class="page-content">
     <h1 class="page-title">Currency Converter</h1>
-    <div class="form-field"></div>
+    <div class="form-field">
+      <label for="originalValue">Amount to convert</label>
+      <input type="number" id="originalValue" placeholder="Amount to convert" [(ngModel)]="originalValue">
+    </div>
+    <div class="form-field">
+      <label for="fixed-rate">Fix Rate</label>
+      <input type="number" id="fixed-rate" placeholder="Fix Rate" [(ngModel)]="fixRate">
+    </div>
+    <div>
+      <label>Variable Rate : {{ variableRate() | number : "1.0-3"}}</label>
+    </div>
+    <div>
+      <label>Fixed Rate : {{ fixRate() | number : "1.0-3"}}</label>
+    </div>
+    <div>
+      <label>applicableRate : {{ applicableRate() | number : "1.0-3"}} (variation : {{ variation() | number: "1.0-3" }})</label>
+    </div>
+    <div>
+      <label>Converted value : {{ convertedValue() | number : "1.0-3"}}</label>
+    </div>
   </article>
 </main>
