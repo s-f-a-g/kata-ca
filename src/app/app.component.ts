@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
+import {CurrencyConverterComponent} from "./components/currency-converter/currency-converter.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet],
+  imports: [CommonModule, RouterOutlet, CurrencyConverterComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })

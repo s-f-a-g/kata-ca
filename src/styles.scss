@@ -1,1 +1,76 @@
 /* You can add global styles to this file, and also import other style files */
+
+:root {
+  --color-primary: #004859;
+  --color-accent: #ff8888;
+  --color-accent-secondary: #ffc15a;
+  --color-accent-secondary-darker: #faa415;
+  --color-success: #4caf50;
+  --color-error: #ff5722;
+  --color-info: #449eff;
+  --color-background: #eceff1;
+  --color-text: #263238;
+  --color-text-light: #607d8b;
+  --height-header: 64px;
+  --height-footer: 48px;
+  --border-radius: 10px;
+  --spacing-step: 8px;
+  --font-size-h1: 34px;
+}
+
+body, html, p, h1, h2, h3, h4, h5, span {
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: 'Poppins';
+  background-color: var(--color-background);
+}
+
+
+form {
+  padding: calc(var(--spacing-step) * 3);
+  box-sizing: border-box;
+  border-radius: var(--border-radius);
+  background: var(--color-background);
+  min-width: 395px;
+  width: 100%;
+  max-width: 450px;
+}
+
+label, input:not([type="checkbox"]), fieldset, button {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  margin-right: var(--spacing-step);
+}
+
+fieldset {
+  border-radius: var(--border-radius);
+  border: 1px solid var(--color-text-light);
+  margin-top: var(--spacing-step);
+}
+
+input, select {
+  border: var(--color-text) solid 2px;
+}
+
+legend {
+  font-weight: bold;
+}
+
+input, button, select {
+  border-radius: 5px;
+  font-size: 18px;
+  padding: 10px 11px;
+}
+
+select {
+  width: 100%;
+}
+
+
