@@ -1,7 +1,9 @@
-import {Component, computed, inject, model, ModelSignal, OnInit} from '@angular/core';
+import {Component, computed, inject, model, ModelSignal, OnInit, signal, WritableSignal} from '@angular/core';
 import {CurrencyConverterService} from "./currency-converter.service";
 import {FormsModule} from "@angular/forms";
 import {CurrencyPipe, DecimalPipe} from "@angular/common";
+
+export type Currency = 'EUR' | 'USD';
 
 @Component({
   selector: 'app-currency-converter',
@@ -34,7 +36,7 @@ export class CurrencyConverterComponent {
     return Math.abs(100 -((fromFixRateValue / fromVariableRateValue) *100));
   })
   convertedValue = computed(() => this.originalValue() * this.applicableRate());
-  selectedCurrency = model('EUR')
+  selectedCurrency: WritableSignal<Currency> = signal('EUR');
 
   constructor() {
   }
