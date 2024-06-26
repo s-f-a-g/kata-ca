@@ -2,6 +2,7 @@ import {Component, computed, inject, model, ModelSignal, OnInit, signal, Writabl
 import {CurrencyConverterService} from "./currency-converter.service";
 import {FormsModule} from "@angular/forms";
 import {CurrencyPipe, DecimalPipe} from "@angular/common";
+import {CurrencyConverterHistoryComponent} from "../currency-converter-history/currency-converter-history.component";
 
 export type Currency = 'EUR' | 'USD';
 
@@ -11,7 +12,8 @@ export type Currency = 'EUR' | 'USD';
   imports: [
     FormsModule,
     DecimalPipe,
-    CurrencyPipe
+    CurrencyPipe,
+    CurrencyConverterHistoryComponent
   ],
   templateUrl: './currency-converter.component.html',
   styleUrl: './currency-converter.component.scss'
