@@ -76,11 +76,11 @@ Nice to have : **ag-grid** / **ngrx / material**
 
 ## Roadmap
 
-- install ngrx
+- install ngrx ?
 
-- install ag-grid
+- install ag-grid ?
 
-## Implem
+## Mode Opératoire
 
 start : 26 juin 16:06
 ```ts
