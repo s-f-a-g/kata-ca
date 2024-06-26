@@ -41,6 +41,7 @@ export class CurrencyConverterComponent {
 
   toggleCurrency() {
     const newCurrency = this.selectedCurrency() === 'EUR' ? 'USD' : 'EUR';
+    this.originalValue.set(this.convertedValue());
     this.selectedCurrency.set(newCurrency);
   }
 }
