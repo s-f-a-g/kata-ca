@@ -9,11 +9,15 @@
       <label for="fixed-rate">Fix Rate</label>
       <input type="number" id="fixed-rate" placeholder="Fix Rate" [(ngModel)]="fixRate">
     </div>
+    <label class="cxc-switch-btn">
+      <input type="checkbox" (change)="toggleCurrency()">
+      <div class="cxc-slide cxc-round">{{ selectedCurrency()}}</div>
+    </label>
     <div class="info-rates">
       <label class="info-label">Variable Rate : {{ variableRate() | number : "1.0-3"}}</label>
       <label class="info-label">Fixed Rate : {{ fixRate() | number : "1.0-3"}}</label>
       <label class="info-label">applicableRate : {{ applicableRate() | number : "1.0-3"}} (variation : {{ variation() | number: "1.0-3" }})</label>
-      <label class="info-label">Converted value : {{ convertedValue() | number : "1.0-3"}}</label>
+      <label class="info-label">Converted value : {{ convertedValue() | number : "1.0-3" | currency : selectedCurrency()}}</label>
     </div>
   </article>
 </main>

@@ -1,14 +1,15 @@
 import {Component, computed, inject, model, ModelSignal, OnInit} from '@angular/core';
 import {CurrencyConverterService} from "./currency-converter.service";
 import {FormsModule} from "@angular/forms";
-import {DecimalPipe} from "@angular/common";
+import {CurrencyPipe, DecimalPipe} from "@angular/common";
 
 @Component({
   selector: 'app-currency-converter',
   standalone: true,
   imports: [
     FormsModule,
-    DecimalPipe
+    DecimalPipe,
+    CurrencyPipe
   ],
   templateUrl: './currency-converter.component.html',
   styleUrl: './currency-converter.component.scss'
@@ -33,7 +34,13 @@ export class CurrencyConverterComponent {
     return Math.abs(100 -((fromFixRateValue / fromVariableRateValue) *100));
   })
   convertedValue = computed(() => this.originalValue() * this.applicableRate());
+  selectedCurrency = model('EUR')
 
   constructor() {
+  }
+
+  toggleCurrency() {
+    const newCurrency = this.selectedCurrency() === 'EUR' ? 'USD' : 'EUR';
+    this.selectedCurrency.set(newCurrency);
   }
 }
