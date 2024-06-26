@@ -28,6 +28,21 @@
   }
 }
 
+.info-rates {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-size: 16px;
+  padding: 10px;
+}
+.info-label {
+
+}
+
+
+/**
+All the css code about the switch is NOT mine
+ */
 .cxc-switch-btn {
   position: relative;
   display: inline-block;

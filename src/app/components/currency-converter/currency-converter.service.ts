@@ -10,7 +10,7 @@ export class CurrencyConverterService {
   variableRate: ModelSignal<number> = model(1.1)
 
   constructor() {
-    effect(() => interval(10000)
+    effect(() => interval(3000)
       .pipe(
       )
       .subscribe(_ => {
