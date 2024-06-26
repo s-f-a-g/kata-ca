@@ -89,3 +89,47 @@ ng new currency-converter
 ```ts
 ng serve
 ```
+Create currency converter component
+
+```ts
+ng g c components/currency-converter
+```
+
+As it needs to be beautiful I will reuse some CSS files I have. In real life I would use the DS specs or the css contained in figma. For the toggle we probably use the one on material or a custom one I 2h seem short to do everything so I will focus on functionality
+
+```ts
+git add .
+git commit -m "KATA_CURRENCY_CONVERTER_0001 init project and add some layout"
+```
+
+I started quite fast so I forgot to do initial commit, so it comes with some layout
+
+Then I switched to branch KATA_CURRENCY_CONVERTER
+
+```ts
+git checkout -b KATA_CURRENCY_CONVERTER
+```
+
+16:27
+
+create currency converter service
+
+```ts
+ng g s components/currency-converter/currency-converter-service
+```
+
+17:38
+
+```ts
+npm install ag-grid-angular
+```
+
+```ts
+npm install ag-grid-community
+```
+
+```ts
+ng g c components/currency-converter-history
+```
+
+18:06 ⇒ FIN
