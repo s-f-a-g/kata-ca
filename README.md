@@ -1,4 +1,3 @@
-# KATA Crédit Agricole
 
 # Réalisation d’un convertisseur euro / dollar
 
